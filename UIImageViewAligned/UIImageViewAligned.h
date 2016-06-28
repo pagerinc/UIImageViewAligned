@@ -26,17 +26,17 @@ typedef enum
 typedef UIImageViewAlignmentMask UIImageViewAignmentMask __attribute__((deprecated("Use UIImageViewAlignmentMask. Use of UIImageViewAignmentMask (misspelled) is deprecated.")));
 
 
-
+IB_DESIGNABLE
 @interface UIImageViewAligned : UIImageView
 
 // This property holds the current alignment
 @property (nonatomic) UIImageViewAlignmentMask alignment;
 
 // Properties needed for Interface Builder quick setup
-@property (nonatomic) BOOL alignLeft;
-@property (nonatomic) BOOL alignRight;
-@property (nonatomic) BOOL alignTop;
-@property (nonatomic) BOOL alignBottom;
+@property (nonatomic) IBInspectable BOOL alignLeft;
+@property (nonatomic) IBInspectable BOOL alignRight;
+@property (nonatomic) IBInspectable BOOL alignTop;
+@property (nonatomic) IBInspectable BOOL alignBottom;
 
 // Make the UIImageView scale only up or down
 // This are used only if the content mode is Scaled
